@@ -1,0 +1,6 @@
+relative_payroll <- read_csv(file = "Data/mlb_relative_payrolls.csv")
+ggplot(data = relative_payroll) + geom_histogram(mapping = aes(x = Winning_Percentage), binwidth = 0.02)
+ggplot(data = relative_payroll) + geom_histogram(mapping = aes(x = Relative_Payroll), binwidth = 0.1)
+ggplot(data = relative_payroll) + geom_point(mapping = aes(x = Relative_Payroll, y = Winning_Percentage))
+ggplot(data = relative_payroll) + geom_point(mapping = aes(x = Year, y = Team_Payroll))
+ggplot(data = relative_payroll) + geom_violin(mapping = aes(y = Team_Payroll, x = factor(Year)))
